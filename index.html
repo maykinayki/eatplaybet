@@ -2,13 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Eat, Play, Bet</title>
-    <link rel="stylesheet" href="static/css/app.css">
+    <title>Eat Play Learn</title>
+    <script>
+        var config = {
+            app_name: "EatLearnBet",
+            base_url: "/eatlearngrow"
+        };
+        window.onload = function() {
+            var s = document.createElement("script");
+            s.type = "text/javascript";
+            s.src = config.base_url+"/static/js/app.js";
+            document.body.appendChild(s);
+
+            var c = document.createElement('link');
+            c.type = 'text/css';
+            c.rel = 'stylesheet';
+            c.href = config.base_url+'/static/css/app.css';
+            document.head.appendChild(c);
+        }
+    </script>
 </head>
 <body>
 
 <div id="app"></div>
 
-<script src="static/js/app.js"></script>
 </body>
 </html>
